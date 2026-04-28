@@ -36,7 +36,7 @@ migrate -path ./migrations -database "postgres://postgres:123987@localhost:5432/
 
 ### 4. Запуск сервисов
 
-**Auth сервис:
+Auth сервис:
 ```bash
 go run cmd/auth-service/main.go
 ```
@@ -44,12 +44,13 @@ Booking сервис:
 ```bash
 go run cmd/booking-service/main.go
 ```
-Тестирование
-# Все тесты с покрытием
+##Тестирование
+#Все тесты с покрытием
+```
 go test -cover ./...
-# Auth сервис
+ Auth сервис
 go test -cover ./cmd/auth-service/...
-# Тесты с моками
+ Тесты с моками
 go test -cover ./internal/auth/...
 
 🔗 API Endpoints
