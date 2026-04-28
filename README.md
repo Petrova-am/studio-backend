@@ -61,23 +61,32 @@ go test -cover ./cmd/auth-service/...
 go test -cover ./internal/auth/...
 ```
 
-🔗 API Endpoints
+## 🔗 API Endpoints
 
-Auth Service (порт 8081)
-POST	/api/auth/login	Вход в систему
-POST	/api/auth/register	Регистрация
-GET	/api/auth/validate	Проверка токена
+### Auth Service (порт 8081)
 
-Booking Service (порт 8082)
-POST	/api/bookings	Создать бронирование
-GET	/api/bookings/user/{id}	Бронирования пользователя
-PUT	/api/bookings/{id}/status	Обновить статус
-GET	/api/bookings/available-slots	Свободные места
+| Метод | Эндпоинт | Описание |
+|-------|----------|----------|
+| POST | `/api/auth/login` | Вход в систему |
+| POST | `/api/auth/register` | Регистрация |
+| GET | `/api/auth/validate` | Проверка токена |
 
-Миграции
-001_create_users_table.up.sql	Таблица пользователей
-002_create_trainers_table.up.sql	Таблица тренеров
-003_create_bookings_table.up.sql	Таблица бронирований
+### Booking Service (порт 8082)
+
+| Метод | Эндпоинт | Описание |
+|-------|----------|----------|
+| POST | `/api/bookings` | Создать бронирование |
+| GET | `/api/bookings/user/{id}` | Бронирования пользователя |
+| PUT | `/api/bookings/{id}/status` | Обновить статус |
+| GET | `/api/bookings/available-slots` | Свободные места |
+
+## 🗄️ Миграции
+
+| Файл | Описание |
+|------|----------|
+| `001_create_users_table.up.sql` | Таблица пользователей |
+| `002_create_trainers_table.up.sql` | Таблица тренеров |
+| `003_create_bookings_table.up.sql` | Таблица бронирований |
 
 Технологии
 Go 1.21	Язык программирования
