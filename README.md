@@ -19,20 +19,31 @@ studio-backend/
 
 ##  Запуск проекта
 
-### 1. Установка зависимостей
+## 1. Установка зависимостей
 ```bash
 go mod tidy
+```
 
-### 2. Запуск PostgreSQL (Docker)
-```bash
+## 2. Запуск PostgreSQL (Docker)
+```
 docker run --name postgres -e POSTGRES_PASSWORD=123987 -e POSTGRES_DB=studio_db -p 5432:5432 -d postgres:15
-3. Миграции
+```
+
+### 3. Миграции
+```bash
 migrate -path ./migrations -database "postgres://postgres:123987@localhost:5432/studio_db?sslmode=disable" up
-4. Запуск сервисов
-Auth сервис:
+```
+
+### 4. Запуск сервисов
+
+**Auth сервис:
+```bash
 go run cmd/auth-service/main.go
+```
 Booking сервис:
+```bash
 go run cmd/booking-service/main.go
+```
 Тестирование
 # Все тесты с покрытием
 go test -cover ./...
