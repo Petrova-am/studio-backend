@@ -22,7 +22,9 @@ studio-backend/
 ### 1. Установка зависимостей
 ```bash
 go mod tidy
-2. Запуск PostgreSQL (Docker)
+
+### 2. Запуск PostgreSQL (Docker)
+```bash
 docker run --name postgres -e POSTGRES_PASSWORD=123987 -e POSTGRES_DB=studio_db -p 5432:5432 -d postgres:15
 3. Миграции
 migrate -path ./migrations -database "postgres://postgres:123987@localhost:5432/studio_db?sslmode=disable" up
