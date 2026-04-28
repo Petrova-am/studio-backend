@@ -1,21 +1,7 @@
 # Студия растяжки - Backend
 Микросервисная архитектура для студии растяжки на Go + PostgreSQL.
 
-##  Структура проекта
-studio-backend/
-├── cmd/
-│ ├── auth-service/ # Сервис авторизации (порт 8081)
-│ └── booking-service/ # Сервис бронирования (порт 8082)
-├── internal/
-│ ├── auth/ # Логика авторизации
-│ ├── booking/ # Логика бронирования
-│ └── models/ # Модели данных
-├── pkg/
-│ ├── database/ # Подключение к БД
-│ ├── logger/ # Логирование (zerolog)
-│ └── middleware/ # CORS, JWT
-├── migrations/ # Миграции БД (3 файла)
-└── docs/ # Swagger документация
+
 
 ##  Запуск проекта
 
@@ -106,9 +92,17 @@ go test -cover ./internal/auth/...
 import "github.com/Petrova-am/studio-backend/pkg/database"
 import "github.com/Petrova-am/studio-backend/pkg/logger"
 import "github.com/Petrova-am/studio-backend/pkg/middleware"
+```
 
-Автор
-Петрова Александра
+## 📄 Лицензия
+
+MIT License
+
+## 📞 Контакты
+
+- **Автор:** Петрова Александра
+- **GitHub:** [Petrova-am](https://github.com/Petrova-am)
+- **Email:** petrova-am@yandex.ru
 
 ## Сохранить и отправить:
 ```cmd
