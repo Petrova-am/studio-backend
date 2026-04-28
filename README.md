@@ -44,14 +44,22 @@ Booking сервис:
 ```bash
 go run cmd/booking-service/main.go
 ```
-##Тестирование
-#Все тесты с покрытием
-```
+## Тестирование
+
+# Все тесты с покрытием
+```bash
 go test -cover ./...
- Auth сервис
+```
+
+# Auth сервис
+```bash
 go test -cover ./cmd/auth-service/...
- Тесты с моками
+```
+
+# Тесты с моками
+```bash
 go test -cover ./internal/auth/...
+```
 
 🔗 API Endpoints
 
