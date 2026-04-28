@@ -94,15 +94,15 @@ import "github.com/Petrova-am/studio-backend/pkg/logger"
 import "github.com/Petrova-am/studio-backend/pkg/middleware"
 ```
 
-## 📄 Лицензия
+##  Лицензия
 
 MIT License
 
-## 📞 Контакты
+##  Контакты
 
 - **Автор:** Петрова Александра
 - **GitHub:** [Petrova-am](https://github.com/Petrova-am)
-- **Email:** petrova-am@yandex.ru
+- **Email:** apetrova2006@gmail.com
 
 ## Сохранить и отправить:
 ```cmd
