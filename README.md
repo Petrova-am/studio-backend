@@ -61,7 +61,7 @@ go test -cover ./cmd/auth-service/...
 go test -cover ./internal/auth/...
 ```
 
-## 🔗 API Endpoints
+##  API Endpoints
 
 ### Auth Service (порт 8081)
 
@@ -80,7 +80,7 @@ go test -cover ./internal/auth/...
 | PUT | `/api/bookings/{id}/status` | Обновить статус |
 | GET | `/api/bookings/available-slots` | Свободные места |
 
-## 🗄️ Миграции
+##  Миграции
 
 | Файл | Описание |
 |------|----------|
@@ -88,19 +88,24 @@ go test -cover ./internal/auth/...
 | `002_create_trainers_table.up.sql` | Таблица тренеров |
 | `003_create_bookings_table.up.sql` | Таблица бронирований |
 
-Технологии
-Go 1.21	Язык программирования
-PostgreSQL 15	База данных
-JWT	Авторизация
-Zerolog	Логирование
-Testify	Тесты и моки
-golang-migrate	Миграции
-Swagger	Документация API
+##  Технологии
 
-Импорт модулей
-go
+| Технология | Версия | Назначение |
+|------------|--------|------------|
+| **Go** | 1.21 | Язык программирования |
+| **PostgreSQL** | 15 | База данных |
+| **JWT** | v5 | Авторизация и аутентификация |
+| **Zerolog** | v1.32 | Логирование |
+| **Testify** | v1.8 | Тесты и моки |
+| **golang-migrate** | v4 | Управление миграциями |
+| **Swagger** | v1.16 | Документация API |
+
+##  Импорт модулей
+
+```go
 import "github.com/Petrova-am/studio-backend/pkg/database"
 import "github.com/Petrova-am/studio-backend/pkg/logger"
+import "github.com/Petrova-am/studio-backend/pkg/middleware"
 
 Автор
 Петрова Александра
